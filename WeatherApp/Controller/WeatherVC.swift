@@ -17,6 +17,7 @@ class WeatherVC: UIViewController, UITextFieldDelegate {
     let degreeLabel = UILabel()
     let celsiumLabel = UILabel()
     let cityLabel = UILabel()
+    let weatherManager = WeatherManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,6 @@ class WeatherVC: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print(searchTextField.text!)
         textField.endEditing(true)
         return true
     }
@@ -40,6 +40,9 @@ class WeatherVC: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        if let city = searchTextField.text {
+            weatherManager.fetchWeather(cityName: city)
+        }
         textField.text = ""
         textField.placeholder = "Search"
     }
@@ -47,6 +50,14 @@ class WeatherVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         textField.placeholder = "Search"
         return true
+    }
+    
+    @objc func searchButtonTapped() {
+        if let city = searchTextField.text {
+            weatherManager.fetchWeather(cityName: city)
+        }
+        searchTextField.text = ""
+        searchTextField.placeholder = "Search"
     }
 
 }

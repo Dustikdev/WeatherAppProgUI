@@ -48,6 +48,7 @@ extension WeatherVC {
     
     func configureSearchButton() {
         view.addSubview(searchButton)
+        searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
         searchButton.translatesAutoresizingMaskIntoConstraints = false
         searchButton.tintColor = UIColor(named: "weatherColor")
         searchButton.setBackgroundImage(UIImage(systemName: "magnifyingglass.circle.fill"), for: .normal)
