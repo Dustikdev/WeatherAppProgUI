@@ -23,7 +23,7 @@ extension WeatherVC {
     func configureBackgroundImage() {
         view.addSubview(backgroundImageView)
         backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-        backgroundImageView.image = UIImage(named: "light_background")
+        backgroundImageView.image = UIImage(named: "background")
         backgroundImageView.contentMode = .scaleAspectFill
         NSLayoutConstraint.activate([
             backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -36,7 +36,7 @@ extension WeatherVC {
     func configureGeoButton() {
         view.addSubview(geoButton)
         geoButton.translatesAutoresizingMaskIntoConstraints = false
-        geoButton.tintColor = .black
+        geoButton.tintColor = UIColor(named: "weatherColor")
         geoButton.setBackgroundImage(UIImage(systemName: "location.circle.fill"), for: .normal)
         NSLayoutConstraint.activate([
             geoButton.heightAnchor.constraint(equalToConstant: 44),
@@ -49,7 +49,7 @@ extension WeatherVC {
     func configureSearchButton() {
         view.addSubview(searchButton)
         searchButton.translatesAutoresizingMaskIntoConstraints = false
-        searchButton.tintColor = .black
+        searchButton.tintColor = UIColor(named: "weatherColor")
         searchButton.setBackgroundImage(UIImage(systemName: "magnifyingglass.circle.fill"), for: .normal)
         NSLayoutConstraint.activate([
             searchButton.heightAnchor.constraint(equalToConstant: 44),
@@ -63,6 +63,7 @@ extension WeatherVC {
         view.addSubview(searchTextField)
         searchTextField.translatesAutoresizingMaskIntoConstraints = false
         searchTextField.placeholder = "Search"
+        searchTextField.clearButtonMode = .whileEditing
         searchTextField.font = .systemFont(ofSize: 22, weight: .medium)
         searchTextField.textAlignment = .right
         searchTextField.backgroundColor = .systemFill
@@ -84,7 +85,7 @@ extension WeatherVC {
         view.addSubview(weatherImageView)
         weatherImageView.translatesAutoresizingMaskIntoConstraints = false
         weatherImageView.image = UIImage(systemName: "cloud.fill")
-        weatherImageView.tintColor = .black
+        weatherImageView.tintColor = UIColor(named: "weatherColor")
         weatherImageView.contentMode = .scaleAspectFit
         NSLayoutConstraint.activate([
             weatherImageView.heightAnchor.constraint(equalToConstant: 120),

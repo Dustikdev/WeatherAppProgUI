@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeatherVC: UIViewController {
+class WeatherVC: UIViewController, UITextFieldDelegate {
 
     let backgroundImageView = UIImageView()
     let geoButton = UIButton()
@@ -21,7 +21,32 @@ class WeatherVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        searchTextField.delegate = self
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print(searchTextField.text!)
+        textField.endEditing(true)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            return true
+        } else {
+            textField.placeholder = "Type something"
+            return false
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.text = ""
+        textField.placeholder = "Search"
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        textField.placeholder = "Search"
+        return true
+    }
 
 }

@@ -13,6 +13,7 @@
 		79DA499429253C9B00A43627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DA499229253C9B00A43627 /* LaunchScreen.storyboard */; };
 		79DA499C29253D2F00A43627 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA499B29253D2F00A43627 /* WeatherVC.swift */; };
 		79DA499E29253EC400A43627 /* WeatherVC+ExtUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA499D29253EC400A43627 /* WeatherVC+ExtUI.swift */; };
+		79DA49A22927DDD900A43627 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DA49A12927DDD900A43627 /* WeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		79DA499529253C9B00A43627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79DA499B29253D2F00A43627 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		79DA499D29253EC400A43627 /* WeatherVC+ExtUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeatherVC+ExtUI.swift"; sourceTree = "<group>"; };
+		79DA49A12927DDD900A43627 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		79DA49A029253F0800A43627 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				79DA49A12927DDD900A43627 /* WeatherManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				79DA498829253C9900A43627 /* AppDelegate.swift in Sources */,
 				79DA498A29253C9900A43627 /* SceneDelegate.swift in Sources */,
+				79DA49A22927DDD900A43627 /* WeatherManager.swift in Sources */,
 				79DA499E29253EC400A43627 /* WeatherVC+ExtUI.swift in Sources */,
 				79DA499C29253D2F00A43627 /* WeatherVC.swift in Sources */,
 			);
@@ -301,7 +305,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = WeatherApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -329,7 +333,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = WeatherApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
