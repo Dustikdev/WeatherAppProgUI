@@ -35,6 +35,7 @@ extension WeatherVC {
     
     func configureGeoButton() {
         view.addSubview(geoButton)
+        geoButton.addTarget(self, action: #selector(geoButtonTapped), for: .touchUpInside)
         geoButton.translatesAutoresizingMaskIntoConstraints = false
         geoButton.tintColor = UIColor(named: "weatherColor")
         geoButton.setBackgroundImage(UIImage(systemName: "location.circle.fill"), for: .normal)
